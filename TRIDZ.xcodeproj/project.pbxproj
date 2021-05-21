@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A4F54C149BD03E3AAB633A1 /* Pods_TRIDZ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15860DF709C31EDF67F376A0 /* Pods_TRIDZ.framework */; };
 		B60BC1122657EDCE005B0BA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60BC1112657EDCE005B0BA6 /* AppDelegate.swift */; };
 		B60BC1142657EDCE005B0BA6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60BC1132657EDCE005B0BA6 /* SceneDelegate.swift */; };
 		B60BC1162657EDCE005B0BA6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60BC1152657EDCE005B0BA6 /* ViewController.swift */; };
@@ -18,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15860DF709C31EDF67F376A0 /* Pods_TRIDZ.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TRIDZ.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C5FC928D7477AD70BCB1D5D /* Pods-TRIDZ.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRIDZ.release.xcconfig"; path = "Target Support Files/Pods-TRIDZ/Pods-TRIDZ.release.xcconfig"; sourceTree = "<group>"; };
+		70C77C723B6E2CA9865B6007 /* Pods-TRIDZ.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRIDZ.debug.xcconfig"; path = "Target Support Files/Pods-TRIDZ/Pods-TRIDZ.debug.xcconfig"; sourceTree = "<group>"; };
 		B60BC10E2657EDCE005B0BA6 /* TRIDZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TRIDZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B60BC1112657EDCE005B0BA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B60BC1132657EDCE005B0BA6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,17 +39,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A4F54C149BD03E3AAB633A1 /* Pods_TRIDZ.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		232DD3EDB3751F5E323BA492 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				70C77C723B6E2CA9865B6007 /* Pods-TRIDZ.debug.xcconfig */,
+				2C5FC928D7477AD70BCB1D5D /* Pods-TRIDZ.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B60BC1052657EDCE005B0BA6 = {
 			isa = PBXGroup;
 			children = (
 				B60BC1102657EDCE005B0BA6 /* TRIDZ */,
 				B60BC10F2657EDCE005B0BA6 /* Products */,
+				232DD3EDB3751F5E323BA492 /* Pods */,
+				B9A7E8A238E414E35997FDC7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +98,14 @@
 			path = Chat;
 			sourceTree = "<group>";
 		};
+		B9A7E8A238E414E35997FDC7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				15860DF709C31EDF67F376A0 /* Pods_TRIDZ.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -88,9 +113,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B60BC1222657EDD1005B0BA6 /* Build configuration list for PBXNativeTarget "TRIDZ" */;
 			buildPhases = (
+				18AA24B536DA89D9B9BB2B78 /* [CP] Check Pods Manifest.lock */,
 				B60BC10A2657EDCE005B0BA6 /* Sources */,
 				B60BC10B2657EDCE005B0BA6 /* Frameworks */,
 				B60BC10C2657EDCE005B0BA6 /* Resources */,
+				62D0E28ECF450C0752CFA590 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -146,6 +173,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		18AA24B536DA89D9B9BB2B78 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TRIDZ-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		62D0E28ECF450C0752CFA590 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TRIDZ/Pods-TRIDZ-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TRIDZ/Pods-TRIDZ-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TRIDZ/Pods-TRIDZ-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B60BC10A2657EDCE005B0BA6 /* Sources */ = {
@@ -299,6 +368,7 @@
 		};
 		B60BC1232657EDD1005B0BA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70C77C723B6E2CA9865B6007 /* Pods-TRIDZ.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -318,6 +388,7 @@
 		};
 		B60BC1242657EDD1005B0BA6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C5FC928D7477AD70BCB1D5D /* Pods-TRIDZ.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
