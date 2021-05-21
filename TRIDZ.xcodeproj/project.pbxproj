@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,8 +14,12 @@
 		B60BC1192657EDCE005B0BA6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B60BC1172657EDCE005B0BA6 /* Main.storyboard */; };
 		B60BC11B2657EDD1005B0BA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B60BC11A2657EDD1005B0BA6 /* Assets.xcassets */; };
 		B60BC11E2657EDD1005B0BA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B60BC11C2657EDD1005B0BA6 /* LaunchScreen.storyboard */; };
-		B60BC1282657EEFF005B0BA6 /* MessgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60BC1272657EEFF005B0BA6 /* MessgeViewController.swift */; };
+		B60BC1282657EEFF005B0BA6 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60BC1272657EEFF005B0BA6 /* MessageViewController.swift */; };
 		B60BC12B2657EF26005B0BA6 /* ChatView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B60BC12A2657EF26005B0BA6 /* ChatView.storyboard */; };
+		B627DBA3265812890085BDAC /* MyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B627DBA2265812890085BDAC /* MyCell.swift */; };
+		B627DBA6265812A10085BDAC /* MyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B627DBA5265812A10085BDAC /* MyCell.xib */; };
+		B627DBA9265812C90085BDAC /* YourCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B627DBA8265812C90085BDAC /* YourCell.swift */; };
+		B627DBAC265813370085BDAC /* YourCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B627DBAB265813370085BDAC /* YourCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +34,12 @@
 		B60BC11A2657EDD1005B0BA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B60BC11D2657EDD1005B0BA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B60BC11F2657EDD1005B0BA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B60BC1272657EEFF005B0BA6 /* MessgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessgeViewController.swift; sourceTree = "<group>"; };
+		B60BC1272657EEFF005B0BA6 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		B60BC12A2657EF26005B0BA6 /* ChatView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChatView.storyboard; sourceTree = "<group>"; };
+		B627DBA2265812890085BDAC /* MyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCell.swift; sourceTree = "<group>"; };
+		B627DBA5265812A10085BDAC /* MyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCell.xib; sourceTree = "<group>"; };
+		B627DBA8265812C90085BDAC /* YourCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourCell.swift; sourceTree = "<group>"; };
+		B627DBAB265813370085BDAC /* YourCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YourCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +60,6 @@
 				70C77C723B6E2CA9865B6007 /* Pods-TRIDZ.debug.xcconfig */,
 				2C5FC928D7477AD70BCB1D5D /* Pods-TRIDZ.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -92,8 +99,12 @@
 		B60BC1262657EE2E005B0BA6 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				B60BC1272657EEFF005B0BA6 /* MessgeViewController.swift */,
+				B60BC1272657EEFF005B0BA6 /* MessageViewController.swift */,
 				B60BC12A2657EF26005B0BA6 /* ChatView.storyboard */,
+				B627DBA2265812890085BDAC /* MyCell.swift */,
+				B627DBA5265812A10085BDAC /* MyCell.xib */,
+				B627DBA8265812C90085BDAC /* YourCell.swift */,
+				B627DBAB265813370085BDAC /* YourCell.xib */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -169,6 +180,8 @@
 				B60BC12B2657EF26005B0BA6 /* ChatView.storyboard in Resources */,
 				B60BC11B2657EDD1005B0BA6 /* Assets.xcassets in Resources */,
 				B60BC1192657EDCE005B0BA6 /* Main.storyboard in Resources */,
+				B627DBAC265813370085BDAC /* YourCell.xib in Resources */,
+				B627DBA6265812A10085BDAC /* MyCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,9 +234,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B60BC1282657EEFF005B0BA6 /* MessgeViewController.swift in Sources */,
+				B60BC1282657EEFF005B0BA6 /* MessageViewController.swift in Sources */,
+				B627DBA3265812890085BDAC /* MyCell.swift in Sources */,
 				B60BC1162657EDCE005B0BA6 /* ViewController.swift in Sources */,
 				B60BC1122657EDCE005B0BA6 /* AppDelegate.swift in Sources */,
+				B627DBA9265812C90085BDAC /* YourCell.swift in Sources */,
 				B60BC1142657EDCE005B0BA6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
