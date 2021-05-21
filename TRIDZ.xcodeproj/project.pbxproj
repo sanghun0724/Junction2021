@@ -88,6 +88,8 @@
 		B60BC1102657EDCE005B0BA6 /* TRIDZ */ = {
 			isa = PBXGroup;
 			children = (
+				B644F3BA265846E60062700C /* Socket */,
+				B644F3B9265846DC0062700C /* Home */,
 				B644F3AF265831840062700C /* ChatRoom */,
 				B60BC1262657EE2E005B0BA6 /* Chat */,
 				B60BC1112657EDCE005B0BA6 /* AppDelegate.swift */,
@@ -121,6 +123,20 @@
 				B644F3B4265832400062700C /* ChatRoom.storyboard */,
 			);
 			path = ChatRoom;
+			sourceTree = "<group>";
+		};
+		B644F3B9265846DC0062700C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B644F3BA265846E60062700C /* Socket */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Socket;
 			sourceTree = "<group>";
 		};
 		B9A7E8A238E414E35997FDC7 /* Frameworks */ = {

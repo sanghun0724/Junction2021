@@ -9,7 +9,21 @@ import UIKit
 import UIKit
 
 class MessageViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UITextViewDelegate {
-
+    
+    @IBOutlet weak var personProfileImage: UIImageView!
+    @IBOutlet weak var PersonName: UILabel!
+    @IBOutlet weak var PersonJob: UILabel!
+    let number = "010-0000-12342"
+    @IBOutlet weak var TopView: UIView! {
+        didSet {
+            self.TopView.layer.masksToBounds = false
+            self.TopView.layer.shadowColor = UIColor.systemGray2.cgColor
+            self.TopView.layer.shadowOpacity = 0.9
+            self.TopView.layer.shadowOffset = CGSize(width: 0, height: 3)
+            self.TopView.layer.shadowRadius = 3
+        }
+    }
+    
     @IBOutlet weak var chatTableView: UITableView! {
         didSet {
             self.chatTableView.delegate = self
@@ -22,6 +36,7 @@ class MessageViewController: UIViewController,UITableViewDelegate,UITableViewDat
     @IBOutlet weak var inputTextView: UITextView! {
         didSet {
             self.inputTextView.delegate = self
+            self.inputTextView.layer.cornerRadius = 14
         }
     }
     
@@ -32,6 +47,8 @@ class MessageViewController: UIViewController,UITableViewDelegate,UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
         
         //사용하려는 셀을 등록해야 사용가능
         chatTableView.register(UINib(nibName: "MyCell", bundle: nil), forCellReuseIdentifier: "myCell")
@@ -77,6 +94,11 @@ class MessageViewController: UIViewController,UITableViewDelegate,UITableViewDat
         if indexPath.row % 2 == 0 {
             let myCell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! MyCell
             myCell.myTextView.text = chatDatas[indexPath.row]
+            //여기서 텍스트 검사후 일치 되는거 있으면 하이라이팅 [] 청크를 어떻게 감지 하지 ..
+            // 
+            
+            
+            
             myCell.selectionStyle = .none //클릭 이벤트 없애기
             return myCell
             
@@ -118,5 +140,25 @@ class MessageViewController: UIViewController,UITableViewDelegate,UITableViewDat
             
         }
     }
+    
+    @IBAction func goBack(_ sender: Any) {
+    }
+    
+    
+    
+    @IBAction func VideoCall(_ sender: Any) {
+    }
+    
+    
+    @IBAction func phonCall(_ sender: Any) {
+        guard let number = URL(string: "tel://" + self.number) else { return }
+        UIApplication.shared.open(number)
+    }
+    
+    @IBAction func plusButton(_ sender: Any) {
+        
+    }
+    
+    
 }
 
