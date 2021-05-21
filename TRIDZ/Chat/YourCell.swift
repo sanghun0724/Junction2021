@@ -10,9 +10,11 @@ import UIKit
 class YourCell: UITableViewCell {
 
     @IBOutlet weak var yourCellTextView: UITextView!
+    @IBOutlet weak var myCellBackView:UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        myCellBackView.layer.cornerRadius = 20 
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

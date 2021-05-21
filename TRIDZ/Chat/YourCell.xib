@@ -20,7 +20,7 @@
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="neS-bm-8k9">
                         <rect key="frame" x="60" y="10" width="28.5" height="191"/>
-                        <color key="backgroundColor" red="0.87590396400000003" green="0.93205171819999999" blue="0.99216657880000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.94116765260000002" green="0.94117051360000004" blue="0.94117683169999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" name="AccentColor"/>
                         <rect key="contentStretch" x="0.5" y="0.5" width="0.0" height="0.0"/>
                     </imageView>
@@ -61,6 +61,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="fNI-Zz-Iss"/>
             <connections>
+                <outlet property="myCellBackView" destination="neS-bm-8k9" id="iHM-cS-5My"/>
                 <outlet property="yourCellTextView" destination="2iJ-WI-5ZR" id="JSt-DE-mea"/>
             </connections>
             <point key="canvasLocation" x="2.1739130434782612" y="150.33482142857142"/>
