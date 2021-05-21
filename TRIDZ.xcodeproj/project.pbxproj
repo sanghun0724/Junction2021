@@ -20,6 +20,8 @@
 		B627DBA6265812A10085BDAC /* MyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B627DBA5265812A10085BDAC /* MyCell.xib */; };
 		B627DBA9265812C90085BDAC /* YourCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B627DBA8265812C90085BDAC /* YourCell.swift */; };
 		B627DBAC265813370085BDAC /* YourCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B627DBAB265813370085BDAC /* YourCell.xib */; };
+		B644F3B12658322E0062700C /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B644F3B02658322E0062700C /* ChatRoomViewController.swift */; };
+		B644F3B5265832400062700C /* ChatRoom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B644F3B4265832400062700C /* ChatRoom.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		B627DBA5265812A10085BDAC /* MyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCell.xib; sourceTree = "<group>"; };
 		B627DBA8265812C90085BDAC /* YourCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourCell.swift; sourceTree = "<group>"; };
 		B627DBAB265813370085BDAC /* YourCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YourCell.xib; sourceTree = "<group>"; };
+		B644F3B02658322E0062700C /* ChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
+		B644F3B4265832400062700C /* ChatRoom.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChatRoom.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,8 @@
 		B644F3AF265831840062700C /* ChatRoom */ = {
 			isa = PBXGroup;
 			children = (
+				B644F3B02658322E0062700C /* ChatRoomViewController.swift */,
+				B644F3B4265832400062700C /* ChatRoom.storyboard */,
 			);
 			path = ChatRoom;
 			sourceTree = "<group>";
@@ -187,6 +193,7 @@
 				B60BC11E2657EDD1005B0BA6 /* LaunchScreen.storyboard in Resources */,
 				B60BC12B2657EF26005B0BA6 /* ChatView.storyboard in Resources */,
 				B60BC11B2657EDD1005B0BA6 /* Assets.xcassets in Resources */,
+				B644F3B5265832400062700C /* ChatRoom.storyboard in Resources */,
 				B60BC1192657EDCE005B0BA6 /* Main.storyboard in Resources */,
 				B627DBAC265813370085BDAC /* YourCell.xib in Resources */,
 				B627DBA6265812A10085BDAC /* MyCell.xib in Resources */,
@@ -242,6 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B644F3B12658322E0062700C /* ChatRoomViewController.swift in Sources */,
 				B60BC1282657EEFF005B0BA6 /* MessageViewController.swift in Sources */,
 				B627DBA3265812890085BDAC /* MyCell.swift in Sources */,
 				B60BC1162657EDCE005B0BA6 /* ViewController.swift in Sources */,
