@@ -25,6 +25,8 @@
 		B644F3C1265854220062700C /* SocketClientManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B644F3C0265854220062700C /* SocketClientManager.swift */; };
 		B644F3C4265855CE0062700C /* chatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B644F3C3265855CE0062700C /* chatModel.swift */; };
 		B644F3C7265890F60062700C /* textHighlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B644F3C6265890F60062700C /* textHighlighter.swift */; };
+		B644F3D42658FEA30062700C /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B644F3D32658FEA30062700C /* InfoView.swift */; };
+		B644F3D72659124F0062700C /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B644F3D62659124F0062700C /* PopupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		B644F3C0265854220062700C /* SocketClientManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketClientManager.swift; sourceTree = "<group>"; };
 		B644F3C3265855CE0062700C /* chatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatModel.swift; sourceTree = "<group>"; };
 		B644F3C6265890F60062700C /* textHighlighter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textHighlighter.swift; sourceTree = "<group>"; };
+		B644F3D32658FEA30062700C /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		B644F3D62659124F0062700C /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +123,8 @@
 				B627DBA5265812A10085BDAC /* MyCell.xib */,
 				B627DBA8265812C90085BDAC /* YourCell.swift */,
 				B627DBAB265813370085BDAC /* YourCell.xib */,
+				B644F3D32658FEA30062700C /* InfoView.swift */,
+				B644F3D62659124F0062700C /* PopupViewController.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -275,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B644F3C7265890F60062700C /* textHighlighter.swift in Sources */,
+				B644F3D42658FEA30062700C /* InfoView.swift in Sources */,
 				B644F3C4265855CE0062700C /* chatModel.swift in Sources */,
 				B644F3B12658322E0062700C /* ChatRoomViewController.swift in Sources */,
 				B60BC1282657EEFF005B0BA6 /* MessageViewController.swift in Sources */,
@@ -284,6 +291,7 @@
 				B627DBA9265812C90085BDAC /* YourCell.swift in Sources */,
 				B60BC1142657EDCE005B0BA6 /* SceneDelegate.swift in Sources */,
 				B644F3C1265854220062700C /* SocketClientManager.swift in Sources */,
+				B644F3D72659124F0062700C /* PopupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

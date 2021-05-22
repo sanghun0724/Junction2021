@@ -17,7 +17,6 @@ class MyCell: UITableViewCell,UITextViewDelegate {
         super.awakeFromNib()
         myBackView.layer.cornerRadius = 20
         
-        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -10,14 +10,20 @@ import UIKit
 import SocketIO
 import Prestyler
 
-class MessageViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UITextViewDelegate,UIGestureRecognizerDelegate {
-    let test:[String] = ["JAVA","API","Developer","design"]
+//protocol PoketmonProtocol {
+//    func showPopup(poketmon:chatType)
+//}
+
+class MessageViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UITextViewDelegate {
     
+    var Data = chatType()
+//    var delegate:PoketmonProtocol?
     
     @IBOutlet weak var personProfileImage: UIImageView!
     @IBOutlet weak var PersonName: UILabel!
     @IBOutlet weak var PersonJob: UILabel!
     let number = "010-0000-12342"
+    
     @IBOutlet weak var TopView: UIView! {
         didSet {
             self.TopView.layer.masksToBounds = false
@@ -34,7 +40,7 @@ class MessageViewController: UIViewController,UITableViewDelegate,UITableViewDat
     
     func removeInfoViewAnimation() {
         UIView.animate(withDuration: 0.3) {
-            self.blurEffectView.alpha = 0
+           // self.blurEffectView.alpha = 0
             self.infoView.alpha = 0
             self.infoView.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
         }
@@ -101,7 +107,7 @@ class MessageViewController: UIViewController,UITableViewDelegate,UITableViewDat
             self.view.layoutIfNeeded()
         }
     }
-
+    //MARK: TABELVIEW@@@@
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return chatDatas.count
     }
@@ -115,6 +121,7 @@ class MessageViewController: UIViewController,UITableViewDelegate,UITableViewDat
             highlight(highView:myCell.myTextView, message: myCell.myTextView.text, worldValue: words)
             myCell.yourobj =  {
                 self.detectWords(str: words)
+                
             }
          
             
@@ -162,6 +169,7 @@ class MessageViewController: UIViewController,UITableViewDelegate,UITableViewDat
         }
     }
     
+    // MARK:- Trash Buttons
     @IBAction func goBack(_ sender: Any) {
     }
     
@@ -181,6 +189,8 @@ class MessageViewController: UIViewController,UITableViewDelegate,UITableViewDat
     }
     
     
+    
+    //MARK: - CORE LOGIC FUCN
     //하이라이트주기
     func highlight(highView: UITextView,message:String,worldValue:String) {
         Prestyler.defineRule("T", UIColor.blue)
@@ -189,35 +199,39 @@ class MessageViewController: UIViewController,UITableViewDelegate,UITableViewDat
     }
     
  
-    
     func detectWords(str:String) {
-        for i in test {
-            if i == str {
-                
-            }
-        }
-    }
-    func showPopup(poketmon: [String]) {
-        self.view.addSubview(infoView)
-        infoView.translatesAutoresizingMaskIntoConstraints = false
-        infoView.centerXAnchor.constraint(equalTo:self.view.centerXAnchor).isActive = true
-        infoView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor,constant: -55).isActive = true
-        infoView.heightAnchor.constraint(equalToConstant: 500).isActive = true
-        infoView.widthAnchor.constraint(equalToConstant: view.frame.width - 80).isActive = true
-        infoView.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
-        infoView.alpha = 0
-        infoView.delegate = self
-        infoView.poketmon = poketmon
-        
-        UIView.animate(withDuration: 0.3, animations: {
-            //self.blurEffectView.alpha = 1
-           // self.infoView.transform = .identity
-            self.infoView.alpha = 1
-        })
+        print("check")
+        guard let rvc = self.storyboard?.instantiateViewController(identifier: "pop") as? PopupViewController else {
+                    return
+                }
+        rvc.Data = Data
+        present(rvc, animated: true, completion: nil)
+               
+//        for i in test {
+//            if i == str {
+//
+//            }
+//        }
     }
     
-    
-}
-protocol PoketmonCellProtocol {
-    func showPopup(poketmon:[String])
+    //Show
+//    func showPopup(poketmon:chatType) {
+//        self.view.addSubview(infoView)
+//        infoView.translatesAutoresizingMaskIntoConstraints = false
+//        infoView.centerXAnchor.constraint(equalTo:self.view.centerXAnchor).isActive = true
+//        infoView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor,constant: -55).isActive = true
+//        infoView.heightAnchor.constraint(equalToConstant: 300).isActive = true
+//        infoView.widthAnchor.constraint(equalToConstant: view.frame.width - 200).isActive = true
+//        infoView.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+//        infoView.alpha = 0
+//
+////        infoView.poketmon = poketmon
+//
+//        UIView.animate(withDuration: 0.3, animations: {
+//            //self.blurEffectView.alpha = 1
+//           // self.infoView.transform = .identity
+//            self.infoView.alpha = 1
+//        })
+//    }
+//
 }

@@ -9,6 +9,6 @@ import Foundation
 
 struct chatType {
     var type = -1
-    var message = ""
-    var word = ""
+    var message = "asdw"
+    var word = "DB"
 }
