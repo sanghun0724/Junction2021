@@ -7,7 +7,6 @@
 
 
 import UIKit
-import SocketIO
 import Prestyler
 
 //protocol PoketmonProtocol {
@@ -191,7 +190,7 @@ class MessageViewController: UIViewController,UITableViewDelegate,UITableViewDat
         guard let rvc = self.storyboard?.instantiateViewController(identifier: "pop") as? PopupViewController else {
                     return
                 }
-        rvc.Data = myChatData[0]
+        //rvc.Data = myChatData[0]
         present(rvc, animated: true, completion: nil)
                
 //        for i in test {

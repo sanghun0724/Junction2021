@@ -14,7 +14,7 @@ class SocketClientManager:NSObject {
     var socket:SocketIOClient!
     override init() {
         super.init()
-        socket = self.manager.socket(forNamespace: "/") //roomName
+        socket = self.manager.defaultSocket
         
         socket.on("login") { dataArray,ack in
             if self.socket.status == .connected {
@@ -24,14 +24,24 @@ class SocketClientManager:NSObject {
                        print("ERORR")
                     }
         }
+    
+        socket.on(clientEvent: .connect) { data,ack in
+            print("socket connect")
+            print(data)
+        }
+        
+        
+        
         socket.on("connect_error") { error,ack in
             print("check")
             print(error)
         }
+        
     }
     
     func startConnection() {
         socket.connect()
+        
     }
     
     func closeConnection() {
