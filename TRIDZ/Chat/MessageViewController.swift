@@ -95,7 +95,7 @@ class MessageViewController: UIViewController,UITableViewDelegate,UITableViewDat
             let myCell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! MyCell
             myCell.myTextView.text = chatDatas[indexPath.row]
             //여기서 텍스트 검사후 일치 되는거 있으면 하이라이팅 [] 청크를 어떻게 감지 하지 ..
-            // 
+            //
             
             
             
@@ -110,6 +110,12 @@ class MessageViewController: UIViewController,UITableViewDelegate,UITableViewDat
         }
        
     }
+     //MARK: - CORE FUNC
+    func detectWord(word:String) {
+//        let mutableAttributedString = NSMutableAttributedString(string: "안녕")
+//        mutableAttributedString.addAttribute(.foregroundColor, value: UIColor.blue, range: _NSRange(word))
+    }
+    
     
     
     @IBAction func sendData(_ sender: Any) {

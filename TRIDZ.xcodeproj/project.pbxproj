@@ -22,6 +22,9 @@
 		B627DBAC265813370085BDAC /* YourCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B627DBAB265813370085BDAC /* YourCell.xib */; };
 		B644F3B12658322E0062700C /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B644F3B02658322E0062700C /* ChatRoomViewController.swift */; };
 		B644F3B5265832400062700C /* ChatRoom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B644F3B4265832400062700C /* ChatRoom.storyboard */; };
+		B644F3C1265854220062700C /* SocketClientManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B644F3C0265854220062700C /* SocketClientManager.swift */; };
+		B644F3C4265855CE0062700C /* chatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B644F3C3265855CE0062700C /* chatModel.swift */; };
+		B644F3C7265890F60062700C /* textHighlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B644F3C6265890F60062700C /* textHighlighter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		B627DBAB265813370085BDAC /* YourCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YourCell.xib; sourceTree = "<group>"; };
 		B644F3B02658322E0062700C /* ChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
 		B644F3B4265832400062700C /* ChatRoom.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChatRoom.storyboard; sourceTree = "<group>"; };
+		B644F3C0265854220062700C /* SocketClientManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketClientManager.swift; sourceTree = "<group>"; };
+		B644F3C3265855CE0062700C /* chatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatModel.swift; sourceTree = "<group>"; };
+		B644F3C6265890F60062700C /* textHighlighter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textHighlighter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,7 @@
 				B60BC11A2657EDD1005B0BA6 /* Assets.xcassets */,
 				B60BC11C2657EDD1005B0BA6 /* LaunchScreen.storyboard */,
 				B60BC11F2657EDD1005B0BA6 /* Info.plist */,
+				B644F3C6265890F60062700C /* textHighlighter.swift */,
 			);
 			path = TRIDZ;
 			sourceTree = "<group>";
@@ -135,6 +142,8 @@
 		B644F3BA265846E60062700C /* Socket */ = {
 			isa = PBXGroup;
 			children = (
+				B644F3C0265854220062700C /* SocketClientManager.swift */,
+				B644F3C3265855CE0062700C /* chatModel.swift */,
 			);
 			path = Socket;
 			sourceTree = "<group>";
@@ -265,6 +274,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B644F3C7265890F60062700C /* textHighlighter.swift in Sources */,
+				B644F3C4265855CE0062700C /* chatModel.swift in Sources */,
 				B644F3B12658322E0062700C /* ChatRoomViewController.swift in Sources */,
 				B60BC1282657EEFF005B0BA6 /* MessageViewController.swift in Sources */,
 				B627DBA3265812890085BDAC /* MyCell.swift in Sources */,
@@ -272,6 +283,7 @@
 				B60BC1122657EDCE005B0BA6 /* AppDelegate.swift in Sources */,
 				B627DBA9265812C90085BDAC /* YourCell.swift in Sources */,
 				B60BC1142657EDCE005B0BA6 /* SceneDelegate.swift in Sources */,
+				B644F3C1265854220062700C /* SocketClientManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
