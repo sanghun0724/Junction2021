@@ -16,9 +16,9 @@ class PopupViewController:UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(Data?.message)
-        self.wordName.text = Data?.word
-        self.wordDescription.text = Data?.message
+       
+//        self.wordName.text = Data?.word
+//        self.wordDescription.text = Data?.message
     }
     
     
@@ -26,7 +26,7 @@ class PopupViewController:UIViewController {
     }
     
     @IBAction func goCancel(_ sender: Any) {
-        
+        self.dismiss(animated: true, completion: nil)
     }
     
 }

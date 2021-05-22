@@ -10,6 +10,13 @@ import Prestyler
 
 class ViewController: UIViewController,UITextViewDelegate {
 
+    
+    
+    @IBOutlet weak var LoginTextView: UITextField!
+    
+    
+    
+    
     @IBOutlet weak var textView: UITextView! {
         didSet {
             textView.textAlignment = .center
@@ -17,15 +24,25 @@ class ViewController: UIViewController,UITextViewDelegate {
                     textView.showsVerticalScrollIndicator = false
         }
     }
+    var socket:SocketClientManager!
     
     let quote = "개발은 정말 어려워요"
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+//        SocketClientManager.shared.sendMessage(message: self.textView.text, who: "loginUserName")
+        
+        
+        
+        
+        
+        
+        
+        
         textView.text = quote
-//        let firstAttributes: [NSAttributedString.Key :Any] = [.backgroundColor:UIColor.green,NSAttributedString.Key.kern: 10]
-//        let secondAttributes = [NSAttributedString.Key.foregroundColor:UIColor.red]
-//        let attributedSentence = NSMutableAttributedString(string: quote, attributes: secondAttributes)
+
         Prestyler.defineRule("T", UIColor.blue)
         let aaa = quote.prefilter(text: "개발은", by: "T")
         textView.attributedText = aaa.prestyled()
@@ -57,6 +74,9 @@ class ViewController: UIViewController,UITextViewDelegate {
  
     
     
+    @IBAction func LoginButton(_ sender: Any) {
+        SocketClientManager.shared.startConnection()
+    }
     
 }
 

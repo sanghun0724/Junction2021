@@ -16,7 +16,7 @@ import Prestyler
 
 class MessageViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UITextViewDelegate {
     
-    var Data = chatType()
+    var myChatData:[chatType] = []
 //    var delegate:PoketmonProtocol?
     
     @IBOutlet weak var personProfileImage: UIImageView!
@@ -33,19 +33,7 @@ class MessageViewController: UIViewController,UITableViewDelegate,UITableViewDat
             self.TopView.layer.shadowRadius = 3
         }
     }
-    lazy var infoView:InfoView = {
-        let view = InfoView()
-        return view
-    }()
     
-    func removeInfoViewAnimation() {
-        UIView.animate(withDuration: 0.3) {
-           // self.blurEffectView.alpha = 0
-            self.infoView.alpha = 0
-            self.infoView.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
-        }
-        self.infoView.removeFromSuperview()
-    }
     
     @IBOutlet weak var chatTableView: UITableView! {
         didSet {
@@ -71,7 +59,6 @@ class MessageViewController: UIViewController,UITableViewDelegate,UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
         
         //사용하려는 셀을 등록해야 사용가능
         chatTableView.register(UINib(nibName: "MyCell", bundle: nil), forCellReuseIdentifier: "myCell")
@@ -204,7 +191,7 @@ class MessageViewController: UIViewController,UITableViewDelegate,UITableViewDat
         guard let rvc = self.storyboard?.instantiateViewController(identifier: "pop") as? PopupViewController else {
                     return
                 }
-        rvc.Data = Data
+        rvc.Data = myChatData[0]
         present(rvc, animated: true, completion: nil)
                
 //        for i in test {
@@ -213,6 +200,23 @@ class MessageViewController: UIViewController,UITableViewDelegate,UITableViewDat
 //            }
 //        }
     }
+    
+    
+    //MARK : SERVER Soceket
+    func bindMsg() {
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     //Show
 //    func showPopup(poketmon:chatType) {

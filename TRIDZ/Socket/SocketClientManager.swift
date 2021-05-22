@@ -10,14 +10,23 @@ import SocketIO
 
 class SocketClientManager:NSObject {
     static let shared = SocketClientManager()
-    var manager = SocketManager(socketURL: URL(string: "")!, config: [.log(true),.compress])
+    var manager = SocketManager(socketURL: URL(string: "https://print-chat-app-test.azurewebsites.net/")!, config: [.log(true),.compress])
     var socket:SocketIOClient!
     override init() {
         super.init()
-        socket = self.manager.socket(forNamespace: "") //roomName
+        socket = self.manager.socket(forNamespace: "/") //roomName
         
-        socket.on("") { dataArray,ack in
-            print(dataArray)
+        socket.on("login") { dataArray,ack in
+            if self.socket.status == .connected {
+                        print("socket connected")
+                    }
+                    else {
+                       print("ERORR")
+                    }
+        }
+        socket.on("connect_error") { error,ack in
+            print("check")
+            print(error)
         }
     }
     
@@ -30,7 +39,7 @@ class SocketClientManager:NSObject {
     }
     
     func sendMessage(message:String,who:String) {//서버로 전달 
-        socket.emit("key", ["message":"this is test message"])
+        socket.emit("new message", ["usermane":who,"message":message])
     }
     
     
