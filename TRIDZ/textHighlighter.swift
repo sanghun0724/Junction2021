@@ -57,6 +57,16 @@ extension NSMutableAttributedString {
         self.append(NSAttributedString(string: value, attributes:attributes))
         return self
     }
+    func BlueForgroundColor(_ value:String) -> NSMutableAttributedString {
+        let attributes:[NSAttributedString.Key : Any] = [
+            .font: normalFont,
+            .foregroundColor: UIColor.blue
+
+        ]
+
+        self.append(NSAttributedString(string: value, attributes:attributes))
+        return self
+    }
 
     func underlined(_ value:String) -> NSMutableAttributedString {
 
@@ -82,3 +92,4 @@ extension UITextView {
             self.attributedText = attributedString
         }
 }
+

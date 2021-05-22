@@ -4,11 +4,15 @@
 //
 //  Created by sangheon on 2021/05/21.
 //
-import UIKit
+
 
 import UIKit
+import SocketIO
+import Prestyler
 
-class MessageViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UITextViewDelegate {
+class MessageViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UITextViewDelegate,UIGestureRecognizerDelegate {
+    let test:[String] = ["JAVA","API","Developer","design"]
+    
     
     @IBOutlet weak var personProfileImage: UIImageView!
     @IBOutlet weak var PersonName: UILabel!
@@ -22,6 +26,19 @@ class MessageViewController: UIViewController,UITableViewDelegate,UITableViewDat
             self.TopView.layer.shadowOffset = CGSize(width: 0, height: 3)
             self.TopView.layer.shadowRadius = 3
         }
+    }
+    lazy var infoView:InfoView = {
+        let view = InfoView()
+        return view
+    }()
+    
+    func removeInfoViewAnimation() {
+        UIView.animate(withDuration: 0.3) {
+            self.blurEffectView.alpha = 0
+            self.infoView.alpha = 0
+            self.infoView.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+        }
+        self.infoView.removeFromSuperview()
     }
     
     @IBOutlet weak var chatTableView: UITableView! {
@@ -94,10 +111,12 @@ class MessageViewController: UIViewController,UITableViewDelegate,UITableViewDat
         if indexPath.row % 2 == 0 {
             let myCell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! MyCell
             myCell.myTextView.text = chatDatas[indexPath.row]
-            //여기서 텍스트 검사후 일치 되는거 있으면 하이라이팅 [] 청크를 어떻게 감지 하지 ..
-            //
-            
-            
+            let words = "JAVA"
+            highlight(highView:myCell.myTextView, message: myCell.myTextView.text, worldValue: words)
+            myCell.yourobj =  {
+                self.detectWords(str: words)
+            }
+         
             
             myCell.selectionStyle = .none //클릭 이벤트 없애기
             return myCell
@@ -106,16 +125,12 @@ class MessageViewController: UIViewController,UITableViewDelegate,UITableViewDat
             let yourCell = tableView.dequeueReusableCell(withIdentifier: "yourCell", for: indexPath) as! YourCell
             yourCell.yourCellTextView.text = chatDatas[indexPath.row]
             yourCell.selectionStyle = .none
+           
             return yourCell
         }
        
     }
-     //MARK: - CORE FUNC
-    func detectWord(word:String) {
-//        let mutableAttributedString = NSMutableAttributedString(string: "안녕")
-//        mutableAttributedString.addAttribute(.foregroundColor, value: UIColor.blue, range: _NSRange(word))
-    }
-    
+     
     
     
     @IBAction func sendData(_ sender: Any) {
@@ -166,5 +181,43 @@ class MessageViewController: UIViewController,UITableViewDelegate,UITableViewDat
     }
     
     
+    //하이라이트주기
+    func highlight(highView: UITextView,message:String,worldValue:String) {
+        Prestyler.defineRule("T", UIColor.blue)
+        let att = message.prefilter(text: worldValue, by: "T")
+        highView.attributedText = att.prestyled()
+    }
+    
+ 
+    
+    func detectWords(str:String) {
+        for i in test {
+            if i == str {
+                
+            }
+        }
+    }
+    func showPopup(poketmon: [String]) {
+        self.view.addSubview(infoView)
+        infoView.translatesAutoresizingMaskIntoConstraints = false
+        infoView.centerXAnchor.constraint(equalTo:self.view.centerXAnchor).isActive = true
+        infoView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor,constant: -55).isActive = true
+        infoView.heightAnchor.constraint(equalToConstant: 500).isActive = true
+        infoView.widthAnchor.constraint(equalToConstant: view.frame.width - 80).isActive = true
+        infoView.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+        infoView.alpha = 0
+        infoView.delegate = self
+        infoView.poketmon = poketmon
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            //self.blurEffectView.alpha = 1
+           // self.infoView.transform = .identity
+            self.infoView.alpha = 1
+        })
+    }
+    
+    
 }
-
+protocol PoketmonCellProtocol {
+    func showPopup(poketmon:[String])
+}

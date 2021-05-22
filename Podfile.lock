@@ -1,24 +1,28 @@
 PODS:
   - Alamofire (5.4.1)
+  - Prestyler (1.1.0)
   - Socket.IO-Client-Swift (15.2.0):
     - Starscream (~> 3.1)
   - Starscream (3.1.1)
 
 DEPENDENCIES:
   - Alamofire (~> 5.2)
+  - Prestyler
   - Socket.IO-Client-Swift (~> 15.2.0)
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Prestyler
     - Socket.IO-Client-Swift
     - Starscream
 
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  Prestyler: 738297750a0e56ba2664197413e5eac4b3ef72c4
   Socket.IO-Client-Swift: 1e3e3a1f09f3312a167f0d781eb2f383d477357c
   Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
 
-PODFILE CHECKSUM: fffa42d8f41c67341576b735ae6738e941769cc6
+PODFILE CHECKSUM: 8cfe7f7a2726588deeb113012283a6d0a4ea5e93
 
 COCOAPODS: 1.10.0

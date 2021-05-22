@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" rowHeight="163" id="Rgt-gI-jmi" customClass="MyCell" customModule="Chat_App" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" rowHeight="163" id="Rgt-gI-jmi" customClass="MyCell" customModule="TRIDZ" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="163"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rgt-gI-jmi" id="bRT-MA-yZe">
@@ -28,6 +28,13 @@
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
+                    <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4u-Sw-z0a">
+                        <rect key="frame" x="16" y="11" width="304" height="141"/>
+                        <color key="backgroundColor" red="0.98613516115320499" green="0.98960137086490374" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                        <connections>
+                            <action selector="myHiddenButton:" destination="Rgt-gI-jmi" eventType="touchUpInside" id="GqN-wX-ekO"/>
+                        </connections>
+                    </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2020.1.1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbs-P7-cUM">
                         <rect key="frame" x="260" y="141" width="40" height="12"/>
                         <constraints>
@@ -41,6 +48,9 @@
                 <constraints>
                     <constraint firstItem="AeW-nb-wLu" firstAttribute="top" secondItem="bRT-MA-yZe" secondAttribute="top" constant="10" id="7EP-7Y-YLb"/>
                     <constraint firstAttribute="trailing" secondItem="AeW-nb-wLu" secondAttribute="trailing" constant="20" id="DhX-PW-B0B"/>
+                    <constraint firstItem="Z4u-Sw-z0a" firstAttribute="top" secondItem="bRT-MA-yZe" secondAttribute="topMargin" id="Mde-In-PiV"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Z4u-Sw-z0a" secondAttribute="bottom" id="S8x-Uo-DBp"/>
+                    <constraint firstItem="Z4u-Sw-z0a" firstAttribute="leading" secondItem="bRT-MA-yZe" secondAttribute="leadingMargin" id="TrA-Db-ETW"/>
                     <constraint firstItem="pbs-P7-cUM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bRT-MA-yZe" secondAttribute="leading" constant="40" id="Vbi-Mh-nae"/>
                     <constraint firstItem="ET4-X7-kCT" firstAttribute="top" secondItem="AeW-nb-wLu" secondAttribute="top" constant="5" id="aZJ-AC-WgL"/>
                     <constraint firstItem="ET4-X7-kCT" firstAttribute="bottom" secondItem="AeW-nb-wLu" secondAttribute="bottom" constant="-5" id="cXc-KF-X3V"/>
@@ -48,6 +58,7 @@
                     <constraint firstItem="ET4-X7-kCT" firstAttribute="leading" secondItem="AeW-nb-wLu" secondAttribute="leading" constant="4" id="fgR-KR-pBN"/>
                     <constraint firstItem="AeW-nb-wLu" firstAttribute="bottom" secondItem="pbs-P7-cUM" secondAttribute="top" id="k83-NT-bou"/>
                     <constraint firstItem="ET4-X7-kCT" firstAttribute="trailing" secondItem="AeW-nb-wLu" secondAttribute="trailing" constant="-4" id="moU-st-pIC"/>
+                    <constraint firstAttribute="trailing" secondItem="Z4u-Sw-z0a" secondAttribute="trailing" id="pTA-Lh-Sxh"/>
                     <constraint firstAttribute="bottom" secondItem="pbs-P7-cUM" secondAttribute="bottom" constant="10" id="rvD-1f-2cL"/>
                 </constraints>
             </tableViewCellContentView>

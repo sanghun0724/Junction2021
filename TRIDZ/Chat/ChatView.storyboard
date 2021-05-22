@@ -177,6 +177,53 @@
             </objects>
             <point key="canvasLocation" x="528.98550724637687" y="79.6875"/>
         </scene>
+        <!--Popup View Controller-->
+        <scene sceneID="ehs-T7-Lcx">
+            <objects>
+                <viewController id="yrm-QS-Ioq" customClass="PopupViewController" customModule="TripSoda" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oCk-mX-PHv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Ys-GZ-BLA">
+                                <rect key="frame" x="51" y="226" width="312" height="444"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gq2-ic-Bmp">
+                                        <rect key="frame" x="8" y="21" width="276" height="271"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mwB-L0-HDi">
+                                        <rect key="frame" x="133" y="355" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="f1s-cx-mQi"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="1Ys-GZ-BLA" firstAttribute="centerY" secondItem="oCk-mX-PHv" secondAttribute="centerY" id="Uvd-in-FbC"/>
+                            <constraint firstItem="1Ys-GZ-BLA" firstAttribute="top" secondItem="f1s-cx-mQi" secondAttribute="top" constant="182" id="gsy-ph-CBE"/>
+                            <constraint firstItem="1Ys-GZ-BLA" firstAttribute="centerX" secondItem="oCk-mX-PHv" secondAttribute="centerX" id="jBI-qS-135"/>
+                            <constraint firstItem="1Ys-GZ-BLA" firstAttribute="leading" secondItem="f1s-cx-mQi" secondAttribute="leading" constant="51" id="pyO-9g-pUl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="0Pw-Fd-e8d"/>
+                    <connections>
+                        <outlet property="popView" destination="1Ys-GZ-BLA" id="W1L-81-yRo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pbl-fp-frO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-365.21739130434787" y="141.96428571428569"/>
+        </scene>
     </scenes>
     <resources>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>

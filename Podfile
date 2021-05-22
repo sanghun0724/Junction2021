@@ -6,6 +6,7 @@ target 'TRIDZ' do
   use_frameworks!
 pod 'Alamofire', '~> 5.2'
 pod 'Socket.IO-Client-Swift', '~> 15.2.0'
+pod 'Prestyler'
   # Pods for TRIDZ
 
 end
