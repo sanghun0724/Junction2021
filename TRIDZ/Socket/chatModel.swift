@@ -10,5 +10,8 @@ import Foundation
 struct chatType {
     var userName:String?
     var message:String?
-    var numusers:Int?
 }
+
+
+
+

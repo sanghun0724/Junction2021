@@ -11,71 +11,24 @@ import SocketIO
 
 class ViewController: UIViewController,UITextViewDelegate {
 
-    
-    
     @IBOutlet weak var LoginTextView: UITextField!
-    @IBOutlet weak var textView: UITextView! {
-        didSet {
-            textView.textAlignment = .center
-                    textView.isEditable = false
-                    textView.showsVerticalScrollIndicator = false
-        }
-    }
-    //    let manager = SocketManager(socketURL: URL(string: "http://localhost:3000")!, config: [.log(true), .compress])
-        let manager = SocketManager(socketURL: URL(string: "https://print-chat-app-test.azurewebsites.net")!, config: [.log(true), .compress])
-        var socket:SocketIOClient!
-
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            // Do any additional setup after loading the view.
-            socket = manager.defaultSocket
-            addHandlers()
-            socket.connect()
-        }
-        
-        func addHandlers() {
-            socket.on("connect") {data, ack in
-                print("socket connected")
-                print("Type \"quit\" to stop")
-                self.socket.emit("add user", ["username": "charles"])
-            }
-            socket.on("login") {data, ack in
-                print(data)
-            }
-        }
-
-//    var socket:SocketClientManager!
-//
-//    let quote = "개발은 정말 어려워요"
-//
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
-//
-////        SocketClientManager.shared.sendMessage(message: self.textView.text, who: "loginUserName")
-//
-//
-//
-//
-//
-//
-//
-//
-//        textView.text = quote
-//
-//        Prestyler.defineRule("T", UIColor.blue)
-//        let aaa = quote.prefilter(text: "개발은", by: "T")
-//        textView.attributedText = aaa.prestyled()
-//
-//        let gestureReconizer = UITapGestureRecognizer(target: self, action: #selector(objectsTapLabel(_:)))
-//        gestureReconizer.numberOfTapsRequired = 1
-//        gestureReconizer.numberOfTouchesRequired = 1
-//
-//        textView.addGestureRecognizer(gestureReconizer)
-//        textView.isUserInteractionEnabled = true
-//
+//    @IBOutlet weak var textView: UITextView! {
+//        didSet {
+//            textView.textAlignment = .center
+//            textView.isEditable = false
+//            textView.showsVerticalScrollIndicator = false
+//        }
 //    }
-//
+   
+    @IBOutlet weak var buttonView: UIButton!
+    
+    
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        buttonView.layer.cornerRadius = 10
+    }
+
 //
 //    @objc func objectsTapLabel(_ gesture: UITapGestureRecognizer) {
 //        let text = (textView.text)!
@@ -91,11 +44,11 @@ class ViewController: UIViewController,UITextViewDelegate {
 //        print("tapped word: \(tappedWord)")
 //
 //    }
-//
-//
+
+
     
     @IBAction func LoginButton(_ sender: Any) {
-//        SocketClientManager.shared.startConnection()
+     
     }
     
 }

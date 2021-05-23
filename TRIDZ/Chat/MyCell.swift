@@ -16,6 +16,8 @@ class MyCell: UITableViewCell,UITextViewDelegate {
     override func awakeFromNib() {
         super.awakeFromNib()
         myBackView.layer.cornerRadius = 20
+        myBackView.layer.borderWidth = 1
+        myBackView.layer.borderColor = UIColor(red:222/255, green:225/255, blue:227/255, alpha: 1).cgColor
         
     }
 
