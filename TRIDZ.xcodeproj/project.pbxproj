@@ -27,7 +27,8 @@
 		B644F3C7265890F60062700C /* textHighlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B644F3C6265890F60062700C /* textHighlighter.swift */; };
 		B644F3D42658FEA30062700C /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B644F3D32658FEA30062700C /* InfoView.swift */; };
 		B644F3D72659124F0062700C /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B644F3D62659124F0062700C /* PopupViewController.swift */; };
-		B660104F265944FB00481206 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = B660104E265944FB00481206 /* SwiftPackageProductDependency */; };
+		B660104F265944FB00481206 /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = B660104E265944FB00481206 /* SocketIO */; };
+		B6601058265A10FE00481206 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6601057265A10F900481206 /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		B644F3C6265890F60062700C /* textHighlighter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textHighlighter.swift; sourceTree = "<group>"; };
 		B644F3D32658FEA30062700C /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		B644F3D62659124F0062700C /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
+		B6601057265A10F900481206 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B660104F265944FB00481206 /* BuildFile in Frameworks */,
+				B660104F265944FB00481206 /* SocketIO in Frameworks */,
 				4FFA861A4612FA268DECE8AE /* Pods_TRIDZ.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -109,7 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				B644F3BA265846E60062700C /* Socket */,
-				B644F3B9265846DC0062700C /* Home */,
+				B644F3B9265846DC0062700C /* serarch */,
 				B644F3AF265831840062700C /* ChatRoom */,
 				B60BC1262657EE2E005B0BA6 /* Chat */,
 				B60BC1112657EDCE005B0BA6 /* AppDelegate.swift */,
@@ -148,11 +150,12 @@
 			path = ChatRoom;
 			sourceTree = "<group>";
 		};
-		B644F3B9265846DC0062700C /* Home */ = {
+		B644F3B9265846DC0062700C /* serarch */ = {
 			isa = PBXGroup;
 			children = (
+				B6601057265A10F900481206 /* SearchViewController.swift */,
 			);
-			path = Home;
+			path = serarch;
 			sourceTree = "<group>";
 		};
 		B644F3BA265846E60062700C /* Socket */ = {
@@ -183,7 +186,7 @@
 			);
 			name = TRIDZ;
 			packageProductDependencies = (
-				B660104E265944FB00481206 /* SwiftPackageProductDependency */,
+				B660104E265944FB00481206 /* SocketIO */,
 			);
 			productName = TRIDZ;
 			productReference = B60BC10E2657EDCE005B0BA6 /* TRIDZ.app */;
@@ -213,7 +216,7 @@
 			);
 			mainGroup = B60BC1052657EDCE005B0BA6;
 			packageReferences = (
-				B660104D265944FB00481206 /* RemoteSwiftPackageReference */,
+				B660104D265944FB00481206 /* XCRemoteSwiftPackageReference "socket" */,
 			);
 			productRefGroup = B60BC10F2657EDCE005B0BA6 /* Products */;
 			projectDirPath = "";
@@ -296,6 +299,7 @@
 				B627DBA3265812890085BDAC /* MyCell.swift in Sources */,
 				B60BC1162657EDCE005B0BA6 /* ViewController.swift in Sources */,
 				B60BC1122657EDCE005B0BA6 /* AppDelegate.swift in Sources */,
+				B6601058265A10FE00481206 /* SearchViewController.swift in Sources */,
 				B627DBA9265812C90085BDAC /* YourCell.swift in Sources */,
 				B60BC1142657EDCE005B0BA6 /* SceneDelegate.swift in Sources */,
 				B644F3C1265854220062700C /* SocketClientManager.swift in Sources */,
@@ -505,7 +509,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B660104D265944FB00481206 /* RemoteSwiftPackageReference */ = {
+		B660104D265944FB00481206 /* XCRemoteSwiftPackageReference "socket" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/socketio/socket.io-client-swift";
 			requirement = {
@@ -516,9 +520,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B660104E265944FB00481206 /* SwiftPackageProductDependency */ = {
+		B660104E265944FB00481206 /* SocketIO */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B660104D265944FB00481206 /* RemoteSwiftPackageReference */;
+			package = B660104D265944FB00481206 /* XCRemoteSwiftPackageReference "socket" */;
 			productName = SocketIO;
 		};
 /* End XCSwiftPackageProductDependency section */
